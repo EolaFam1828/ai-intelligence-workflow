@@ -2,6 +2,13 @@
 
 Verified against private codebase commit `cf855f6` on `2026-02-18`.
 
+## Page Navigation
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./SYSTEMS-ARCHITECTURE.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./SKILLS-EVIDENCE-MATRIX.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
+
 Public-safe operational details that demonstrate real system behavior without exposing private source code or proprietary data.
 
 ## 1. Request Contract and Edge Rejection
@@ -89,3 +96,10 @@ Top recurring incident classes and current mitigations:
 - no proprietary heuristics formulae
 - no private schema internals
 - no publishable claim without measurement source
+
+## Continue
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./SYSTEMS-ARCHITECTURE.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./SKILLS-EVIDENCE-MATRIX.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)

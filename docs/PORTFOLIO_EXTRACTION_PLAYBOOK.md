@@ -2,6 +2,13 @@
 
 Verified against private codebase commit `cf855f6` on `2026-02-18`.
 
+## Page Navigation
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./PRIVACY_IP_GUARDRAILS.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./INDEX.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
+
 ## Goal
 
 Convert private project work into public documentation without disclosing private code, identifiers, or proprietary logic.
@@ -45,3 +52,10 @@ Convert private project work into public documentation without disclosing privat
 8. Keep updates incremental.
 - add or revise one artifact at a time
 - remove weak or unverifiable claims
+
+## Continue
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./PRIVACY_IP_GUARDRAILS.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./INDEX.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)

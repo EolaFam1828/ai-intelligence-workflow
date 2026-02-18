@@ -2,6 +2,13 @@
 
 Verified against private codebase commit `cf855f6` on `2026-02-18`.
 
+## Page Navigation
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./ARCHITECTURE-DRIFT-CHECK.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./VISUAL-WALKTHROUGH-AUTHENTICATED.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
+
 All images in this document are sanitized render captures from the private application UI.
 
 Authenticated module renders: [`docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md`](VISUAL-WALKTHROUGH-AUTHENTICATED.md)
@@ -37,3 +44,10 @@ flowchart LR
     ORCH --> AI["Model Providers"]
     DB --> UI
 ```
+
+## Continue
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./ARCHITECTURE-DRIFT-CHECK.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./VISUAL-WALKTHROUGH-AUTHENTICATED.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)

@@ -2,6 +2,13 @@
 
 Verified against private codebase commit `cf855f6` on `2026-02-18`.
 
+## Page Navigation
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./VISUAL-WALKTHROUGH-AUTHENTICATED.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./PORTFOLIO_EXTRACTION_PLAYBOOK.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
+
 ## Rules
 
 1. Do not publish client-identifying details.
@@ -39,3 +46,10 @@ Each claim includes:
 - confirm CI workflow `.github/workflows/sanity-check.yml` passes
 - inspect diff for private terms or identifiers
 - remove unverifiable statements
+
+## Continue
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./VISUAL-WALKTHROUGH-AUTHENTICATED.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./PORTFOLIO_EXTRACTION_PLAYBOOK.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)

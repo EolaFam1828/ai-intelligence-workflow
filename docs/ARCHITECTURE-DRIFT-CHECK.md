@@ -2,6 +2,13 @@
 
 Verified against private codebase commit `cf855f6` on `2026-02-18`.
 
+## Page Navigation
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./CASE-STUDY-TEMPLATE.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./VISUAL-WALKTHROUGH.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
+
 Source repository audited: private source repository  
 Audit date: `2026-02-18`  
 Commit: `cf855f6`
@@ -31,3 +38,10 @@ rg -n "<Route path=\"" App.tsx | wc -l
 - run `scripts/architecture_snapshot.sh` before publishing architecture claims
 - if counts change, update `README.md` and `docs/SYSTEMS-ARCHITECTURE.md`
 - keep claims numeric where possible
+
+## Continue
+
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./CASE-STUDY-TEMPLATE.md)
+[![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./VISUAL-WALKTHROUGH.md)
+[![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)

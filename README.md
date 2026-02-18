@@ -6,6 +6,18 @@ Public architecture and operations dossier for a private AI platform.
 
 This repository shows how the platform is designed, validated, and operated under privacy constraints.
 
+## Navigation Tabs
+
+[![Overview](https://img.shields.io/badge/Overview-1F2937?style=for-the-badge)](#ai-intelligence-workflow)
+[![Snapshot](https://img.shields.io/badge/Snapshot-374151?style=for-the-badge)](#verified-snapshot)
+[![Visuals](https://img.shields.io/badge/Visuals-4B5563?style=for-the-badge)](#visual-walkthrough)
+[![Update%20Workflow](https://img.shields.io/badge/Update%20Workflow-6B7280?style=for-the-badge)](#update-workflow)
+[![Architecture](https://img.shields.io/badge/Architecture-0F766E?style=for-the-badge)](docs/SYSTEMS-ARCHITECTURE.md)
+[![Proving%20Grounds](https://img.shields.io/badge/Proving%20Grounds-0EA5A4?style=for-the-badge)](docs/PROVING-GROUNDS.md)
+[![Case%20Study](https://img.shields.io/badge/Case%20Study-2563EB?style=for-the-badge)](docs/CASE-STUDY-INTELLIGENCE-BRIEF.md)
+[![Drift%20Check](https://img.shields.io/badge/Drift%20Check-7C3AED?style=for-the-badge)](docs/ARCHITECTURE-DRIFT-CHECK.md)
+[![Guardrails](https://img.shields.io/badge/Guardrails-DC2626?style=for-the-badge)](docs/PRIVACY_IP_GUARDRAILS.md)
+
 ## Why No Source Code
 
 The production TypeScript source is intentionally private because it includes client-sensitive workflows, proprietary ranking/routing logic, and internal schemas.
