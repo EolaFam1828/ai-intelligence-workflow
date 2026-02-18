@@ -11,15 +11,8 @@
 | Provenance | `docs/SYSTEMS-ARCHITECTURE.md` | source metadata path documented |
 | Privacy/IP controls | `docs/PRIVACY_IP_GUARDRAILS.md` | publication boundaries documented |
 | Delivery outcomes | case studies using `docs/CASE-STUDY-TEMPLATE.md` | claims include before/after + method |
-
-## Role Review Map
-
-| Role | Review Questions | Primary Files |
-| --- | --- | --- |
-| AI Engineer | How are routing, retrieval, validation, and fallback handled? | `docs/SYSTEMS-ARCHITECTURE.md` |
-| Systems Architect | Are boundaries and failure paths explicit? | `docs/SYSTEMS-ARCHITECTURE.md` |
-| Product/AI Specialist | Are outcomes measurable and scoped? | case studies using `docs/CASE-STUDY-TEMPLATE.md` |
-| Domain Expert | Is output traceable and publication-safe? | `docs/SYSTEMS-ARCHITECTURE.md`, `docs/PRIVACY_IP_GUARDRAILS.md` |
+| Visual implementation proof | `docs/VISUAL-WALKTHROUGH.md` | sanitized desktop/mobile captures included |
+| Architecture currency check | `docs/ARCHITECTURE-DRIFT-CHECK.md` | stale claims identified with code-level counts |
 
 ## Claim Format
 

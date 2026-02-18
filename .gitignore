@@ -1,0 +1,10 @@
+# Local sensitive term list
+.portfolio-sensitive-terms.txt
+
+# Playwright artifacts
+.playwright-cli/
+
+# Keep only sanitized screenshots
+assets/screenshots/raw-*.png
+assets/screenshots/test-*.png
+assets/screenshots/ui-overview-dark-sanitized.png
