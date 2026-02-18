@@ -2,18 +2,6 @@
 
 Public documentation derived from a private AI platform codebase.
 
-## Ownership
-
-- solo architecture and implementation
-- no team attribution in this portfolio repository
-
-## Scope
-
-- no private source code
-- no client or domain identifiers
-- no proprietary algorithms or internal schemas
-- only verified claims
-
 ## Verified Snapshot
 
 Source repository checked: private source repository  
