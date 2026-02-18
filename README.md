@@ -1,40 +1,69 @@
 # AI Intelligence Workflow
 
-Public architecture and operations dossier for a private AI platform.
+Public documentation artifact for a private AI platform, built to show production engineering rigor without exposing proprietary code or client data.
 
 [![Portfolio Sanity Check](https://github.com/EolaFam1828/ai-intelligence-workflow/actions/workflows/sanity-check.yml/badge.svg)](https://github.com/EolaFam1828/ai-intelligence-workflow/actions/workflows/sanity-check.yml)
 
-This repository shows how the platform is designed, validated, and operated under privacy constraints.
+## Problem. Approach. Proof.
 
-## Navigation Tabs
+- **Problem:** Multi-stage LLM workflows can fail silently through schema drift, weak provenance, and poor operational traceability.
+- **Approach:** A contract-first orchestration architecture with strict schema gates, retrieval scoping, citation mapping, telemetry, and fallback control paths.
+- **Proof:** Public-safe architecture docs, proving-ground contracts, reproducible snapshot artifacts, and measured case studies.
 
-[![Overview](https://img.shields.io/badge/Overview-1F2937?style=for-the-badge)](#ai-intelligence-workflow)
-[![Snapshot](https://img.shields.io/badge/Snapshot-374151?style=for-the-badge)](#verified-snapshot)
-[![Visuals](https://img.shields.io/badge/Visuals-4B5563?style=for-the-badge)](#visual-walkthrough)
-[![Update%20Workflow](https://img.shields.io/badge/Update%20Workflow-6B7280?style=for-the-badge)](#update-workflow)
-[![Architecture](https://img.shields.io/badge/Architecture-0F766E?style=for-the-badge)](docs/SYSTEMS-ARCHITECTURE.md)
-[![Proving%20Grounds](https://img.shields.io/badge/Proving%20Grounds-0EA5A4?style=for-the-badge)](docs/PROVING-GROUNDS.md)
-[![Case%20Study](https://img.shields.io/badge/Case%20Study-2563EB?style=for-the-badge)](docs/CASE-STUDY-INTELLIGENCE-BRIEF.md)
-[![Drift%20Check](https://img.shields.io/badge/Drift%20Check-7C3AED?style=for-the-badge)](docs/ARCHITECTURE-DRIFT-CHECK.md)
-[![Guardrails](https://img.shields.io/badge/Guardrails-DC2626?style=for-the-badge)](docs/PRIVACY_IP_GUARDRAILS.md)
+## What This Is
 
-## Why No Source Code
+This repository is a clean-room public dossier derived from a private TypeScript codebase.
+It focuses on architecture, controls, and outcomes that are externally reviewable while private implementation details remain out of scope.
 
-The production TypeScript source is intentionally private because it includes client-sensitive workflows, proprietary ranking/routing logic, and internal schemas.
-This public repo is a clean-room evidence package: architecture, controls, measurements, and outcomes without disclosing private implementation details.
+## What It Proves
 
-## What This Repo Proves
+- production topology and control boundaries for AI orchestration: [`docs/SYSTEMS-ARCHITECTURE.md`](docs/SYSTEMS-ARCHITECTURE.md)
+- contract behavior at edge, generation, and persistence layers: [`docs/PROVING-GROUNDS.md`](docs/PROVING-GROUNDS.md)
+- concrete request/schema/provenance contract examples (synthetic but executable in shape): [`docs/REQUEST_CONTRACTS_AND_SCHEMAS.md`](docs/REQUEST_CONTRACTS_AND_SCHEMAS.md)
+- explicit SLO and failure-budget posture: [`docs/SLOS-AND-FAILURE-BUDGETS.md`](docs/SLOS-AND-FAILURE-BUDGETS.md)
+- privacy, retention, tenant-boundary, and vendor-risk posture: [`docs/PRIVACY_IP_GUARDRAILS.md`](docs/PRIVACY_IP_GUARDRAILS.md)
+- measured outcomes across reliability, retrieval quality, and cost/resilience: case studies in [`docs/INDEX.md`](docs/INDEX.md)
 
-- architecture and control-boundary design for multi-stage AI workflows
-- evidence discipline with measured snapshots and drift checks
-- privacy/IP publication guardrails with automated sanity checks
-- delivery outcomes using sanitized case studies
+## Architecture At A Glance
 
-## Verified Snapshot
+```mermaid
+flowchart TB
+    UI["Frontend"] --> API["API Contract Boundary"]
+    API --> ORCH["Orchestrator"]
+    ORCH --> RET["Retrieval + Scope Filters"]
+    ORCH --> LLM["Model Router (Primary/Fallback)"]
+    ORCH --> VAL["Schema Validator"]
+    ORCH --> PROV["Citation + Provenance Mapper"]
+    API --> DB["PostgreSQL + Prisma"]
+    API --> Q["Async Queue"]
+    Q --> W["Workers"]
+    ORCH --> OBS["Metrics/Logs/Traces"]
+    W --> OBS
+```
 
-Source repository checked: private source repository  
-Commit: `cf855f6`  
-Verification date: `2026-02-18`
+## Operational Reality
+
+- **p95 latency SLO:** `<= 6.0s` for synchronous generation path
+- **schema-valid response SLO:** `>= 97%`
+- **citation resolution SLO:** `>= 99%`
+- **error-budget policy:** fallback routing and feature degradation activate when burn rate exceeds threshold
+- **failure classes covered:** schema-invalid output, provider timeouts/5xx, low-signal retrieval, unresolved citations, duplicate async jobs
+
+Details: [`docs/SLOS-AND-FAILURE-BUDGETS.md`](docs/SLOS-AND-FAILURE-BUDGETS.md)
+
+## Verified Snapshot (Public-Safe)
+
+Private source reference (for chronology only):
+
+- Source repository: private
+- Commit: `cf855f6`
+- Verification date: `2026-02-18`
+
+Public verification artifacts:
+
+- command log + snapshot output: [`docs/snapshots/architecture_snapshot_2026-02-18.md`](docs/snapshots/architecture_snapshot_2026-02-18.md)
+- redacted route-family inventory: [`docs/snapshots/route_inventory_2026-02-18.md`](docs/snapshots/route_inventory_2026-02-18.md)
+- redacted schema-category inventory: [`docs/snapshots/schema_inventory_2026-02-18.md`](docs/snapshots/schema_inventory_2026-02-18.md)
 
 | Metric | Current Value |
 | --- | --- |
@@ -47,19 +76,20 @@ Verification date: `2026-02-18`
 | Service-layer TypeScript files | 37 |
 | Frontend component files (`.tsx`) | 87 |
 
-## Documentation Index
+## Evidence Map
 
-See [`docs/INDEX.md`](docs/INDEX.md) for a full navigation table.
+See full navigation index: [`docs/INDEX.md`](docs/INDEX.md)
 
-| Area | Primary Document |
+| Evidence Need | Artifact |
 | --- | --- |
-| system topology + controls | [`docs/SYSTEMS-ARCHITECTURE.md`](docs/SYSTEMS-ARCHITECTURE.md) |
-| deep operational proof | [`docs/PROVING-GROUNDS.md`](docs/PROVING-GROUNDS.md) |
-| architecture drift evidence | [`docs/ARCHITECTURE-DRIFT-CHECK.md`](docs/ARCHITECTURE-DRIFT-CHECK.md) |
-| capability-to-evidence mapping | [`docs/SKILLS-EVIDENCE-MATRIX.md`](docs/SKILLS-EVIDENCE-MATRIX.md) |
-| sanitized outcomes | [`docs/CASE-STUDY-INTELLIGENCE-BRIEF.md`](docs/CASE-STUDY-INTELLIGENCE-BRIEF.md) |
-| publication guardrails | [`docs/PRIVACY_IP_GUARDRAILS.md`](docs/PRIVACY_IP_GUARDRAILS.md) |
-| extraction workflow | [`docs/PORTFOLIO_EXTRACTION_PLAYBOOK.md`](docs/PORTFOLIO_EXTRACTION_PLAYBOOK.md) |
+| Topology and boundaries | [`docs/SYSTEMS-ARCHITECTURE.md`](docs/SYSTEMS-ARCHITECTURE.md) |
+| Contracts and incident behavior | [`docs/PROVING-GROUNDS.md`](docs/PROVING-GROUNDS.md) |
+| Request DTO/schema/provenance examples | [`docs/REQUEST_CONTRACTS_AND_SCHEMAS.md`](docs/REQUEST_CONTRACTS_AND_SCHEMAS.md) |
+| SLOs and failure budgets | [`docs/SLOS-AND-FAILURE-BUDGETS.md`](docs/SLOS-AND-FAILURE-BUDGETS.md) |
+| Drift and claim currency | [`docs/ARCHITECTURE-DRIFT-CHECK.md`](docs/ARCHITECTURE-DRIFT-CHECK.md) |
+| Privacy/IP and data handling | [`docs/PRIVACY_IP_GUARDRAILS.md`](docs/PRIVACY_IP_GUARDRAILS.md) |
+| Delivery outcomes | [`docs/CASE-STUDY-INTELLIGENCE-BRIEF.md`](docs/CASE-STUDY-INTELLIGENCE-BRIEF.md), [`docs/CASE-STUDY-RETRIEVAL-QUALITY.md`](docs/CASE-STUDY-RETRIEVAL-QUALITY.md), [`docs/CASE-STUDY-COST-RESILIENCE.md`](docs/CASE-STUDY-COST-RESILIENCE.md) |
+| Visual proof (sanitized) | [`docs/VISUAL-WALKTHROUGH.md`](docs/VISUAL-WALKTHROUGH.md), [`docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md`](docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md) |
 
 ## Visual Walkthrough
 
@@ -69,32 +99,17 @@ See [`docs/INDEX.md`](docs/INDEX.md) for a full navigation table.
 
 ![Sanitized Authenticated Workflow Module](assets/screenshots/ui-module-workflow-auth-sanitized.png)
 
-## Repository Contents
+## Update + Safety Workflow
 
-- [`docs/INDEX.md`](docs/INDEX.md)
-- [`docs/SYSTEMS-ARCHITECTURE.md`](docs/SYSTEMS-ARCHITECTURE.md)
-- [`docs/PROVING-GROUNDS.md`](docs/PROVING-GROUNDS.md)
-- [`docs/VISUAL-WALKTHROUGH.md`](docs/VISUAL-WALKTHROUGH.md)
-- [`docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md`](docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md)
-- [`docs/ARCHITECTURE-DRIFT-CHECK.md`](docs/ARCHITECTURE-DRIFT-CHECK.md)
-- [`docs/SKILLS-EVIDENCE-MATRIX.md`](docs/SKILLS-EVIDENCE-MATRIX.md)
-- [`docs/CASE-STUDY-TEMPLATE.md`](docs/CASE-STUDY-TEMPLATE.md)
-- [`docs/CASE-STUDY-INTELLIGENCE-BRIEF.md`](docs/CASE-STUDY-INTELLIGENCE-BRIEF.md)
-- [`docs/PORTFOLIO_EXTRACTION_PLAYBOOK.md`](docs/PORTFOLIO_EXTRACTION_PLAYBOOK.md)
-- [`docs/PRIVACY_IP_GUARDRAILS.md`](docs/PRIVACY_IP_GUARDRAILS.md)
-- [`scripts/architecture_snapshot.sh`](scripts/architecture_snapshot.sh)
-- [`scripts/sanity_check_portfolio.sh`](scripts/sanity_check_portfolio.sh)
-- [`scripts/install_git_hooks.sh`](scripts/install_git_hooks.sh)
-- [`.githooks/pre-commit`](.githooks/pre-commit)
-- [`.github/workflows/sanity-check.yml`](.github/workflows/sanity-check.yml)
+1. Refresh private metrics with `scripts/architecture_snapshot.sh <private-repo-path>`.
+2. Add a new dated public-safe snapshot in `docs/snapshots/`.
+3. Update architecture, proving-ground, and case-study docs if claims changed.
+4. Run `./scripts/sanity_check_portfolio.sh .`.
+5. Install hooks once with `./scripts/install_git_hooks.sh`.
+6. Ensure CI `Portfolio Sanity Check` passes in `.github/workflows/sanity-check.yml`.
+7. Review the diff for disclosure risk before publish.
 
-## Update Workflow
+## Why Source Code Is Not Public
 
-1. Refresh counts from private source with `scripts/architecture_snapshot.sh <private-repo-path>`.
-2. Update architecture or case-study docs (including `docs/ARCHITECTURE-DRIFT-CHECK.md` status updates).
-3. Verify every claim has a measurement source.
-4. Copy `.portfolio-sensitive-terms.example.txt` to `.portfolio-sensitive-terms.txt` and add private terms.
-5. Install hooks once with `./scripts/install_git_hooks.sh` (runs `sanity_check_portfolio.sh` on each commit).
-6. Run `./scripts/sanity_check_portfolio.sh .` locally when preparing a publish update.
-7. Ensure CI passes `Portfolio Sanity Check` in `.github/workflows/sanity-check.yml`.
-8. Review the diff for disclosure risk before publish.
+The production codebase includes client-sensitive workflows, proprietary routing/ranking logic, and private schemas.
+This repository intentionally publishes evidence of engineering quality without publishing private implementation internals.

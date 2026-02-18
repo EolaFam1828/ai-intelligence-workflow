@@ -1,0 +1,5 @@
+# Regex allowlist for sanity_check_portfolio.sh findings.
+# One regex per line. Blank lines and comments are ignored.
+#
+# Example: allow a known public token-like fixture in docs only
+# ^docs/REQUEST_CONTRACTS_AND_SCHEMAS\\.md:.*urn:portfolio:

@@ -4,12 +4,16 @@ Verified against private codebase commit `cf855f6` on `2026-02-18`.
 
 ## Page Navigation
 
-[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./CASE-STUDY-INTELLIGENCE-BRIEF.md)
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./CASE-STUDY-COST-RESILIENCE.md)
 [![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
 [![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./ARCHITECTURE-DRIFT-CHECK.md)
 [![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
 
-Reference example: `docs/CASE-STUDY-INTELLIGENCE-BRIEF.md`
+Reference examples:
+
+- `docs/CASE-STUDY-INTELLIGENCE-BRIEF.md`
+- `docs/CASE-STUDY-RETRIEVAL-QUALITY.md`
+- `docs/CASE-STUDY-COST-RESILIENCE.md`
 
 ## 1. Snapshot
 
@@ -57,6 +61,7 @@ Reference example: `docs/CASE-STUDY-INTELLIGENCE-BRIEF.md`
 ## 7. Outcomes
 
 For each claim:
+
 - metric:
 - before:
 - after:
@@ -91,7 +96,7 @@ For each claim:
 
 ## Continue
 
-[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./CASE-STUDY-INTELLIGENCE-BRIEF.md)
+[![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./CASE-STUDY-COST-RESILIENCE.md)
 [![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
 [![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./ARCHITECTURE-DRIFT-CHECK.md)
 [![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)

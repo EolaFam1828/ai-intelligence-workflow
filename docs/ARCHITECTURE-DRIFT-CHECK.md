@@ -9,35 +9,35 @@ Verified against private codebase commit `cf855f6` on `2026-02-18`.
 [![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./VISUAL-WALKTHROUGH.md)
 [![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
 
-Source repository audited: private source repository  
-Audit date: `2026-02-18`  
-Commit: `cf855f6`
+This drift check compares **previous public claims** to the current public-safe snapshot artifacts.
+
+## Baseline Sources
+
+- current snapshot: [`docs/snapshots/architecture_snapshot_2026-02-18.md`](./snapshots/architecture_snapshot_2026-02-18.md)
+- previous claims ledger: [`docs/LEGACY_CLAIMS_PUBLIC.md`](./LEGACY_CLAIMS_PUBLIC.md)
 
 ## Findings
 
-| Source | Documented Claim | Code Observation | Status |
-| --- | --- | --- | --- |
-| `TECH_SPEC.md:91` and `TECH_SPEC.md:369` | `16 route modules` and `117+ endpoints` | `25` route files under `server/src/routes`, `151` route handlers (`router.get/post/put/patch/delete`) | stale |
-| `TECH_SPEC.md:106` and `TECH_SPEC.md:200` | `44 models` and `18 migrations` | `49` Prisma models, `22` migration directories | stale |
-| `README.md:228` | `147 API endpoints` | public docs now aligned to `151` route handlers in `README.md:16` and `docs/SYSTEMS-ARCHITECTURE.md:86` | resolved (public mirror updated) |
-| `TECH_SPEC.md:1071` | `No mobile optimization` | responsive mobile shell paths in `App.tsx:188`, `App.tsx:292`, `App.tsx:319`; validated by sanitized mobile render capture | stale |
+| Previous Public Claim | Current Snapshot Observation | Status |
+| --- | --- | --- |
+| `16 route modules` and `117+ handlers` | `25` route files and `151` handlers | stale |
+| `44 models` and `18 migrations` | `49` models and `22` migrations | stale |
+| `147 API handlers` | `151` handlers | stale |
+| `No mobile optimization` | responsive mobile shell confirmed in sanitized capture set (`assets/screenshots/ui-overview-mobile-sanitized.png`) | stale |
 
-## Command Log
+## Command Log (Private Run, Public-Safe Results)
 
 ```bash
 cd <private-repo-root>
-rg -n "router\\.(get|post|put|patch|delete)\\(" server/src/routes -g '*.ts' | wc -l
-rg -n '^model\\s+' prisma/schema.prisma | wc -l
-find prisma/migrations -mindepth 1 -maxdepth 1 -type d | wc -l
-find server/src/routes -type f -name '*.ts' | wc -l
-rg -n "<Route path=\"" App.tsx | wc -l
+./scripts/architecture_snapshot.sh <private-repo-root>
 ```
 
 ## Update Policy
 
-- run `scripts/architecture_snapshot.sh` before publishing architecture claims
-- if counts change, update `README.md` and `docs/SYSTEMS-ARCHITECTURE.md`
-- keep claims numeric where possible
+1. Run `scripts/architecture_snapshot.sh` before publishing architecture claims.
+2. Add a dated artifact in `docs/snapshots/`.
+3. Update stale claims in `README.md`, `docs/SYSTEMS-ARCHITECTURE.md`, and case-study references.
+4. Keep this drift file focused on public-to-public claim comparison.
 
 ## Continue
 

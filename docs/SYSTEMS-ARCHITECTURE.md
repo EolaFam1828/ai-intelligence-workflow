@@ -6,7 +6,7 @@ Verified against private codebase commit `cf855f6` on `2026-02-18`.
 
 [![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./INDEX.md)
 [![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
-[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./PROVING-GROUNDS.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./REQUEST_CONTRACTS_AND_SCHEMAS.md)
 [![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
 
 ## Runtime Topology
@@ -61,11 +61,11 @@ sequenceDiagram
 
 ```mermaid
 flowchart LR
-    U["User Upload / Trigger"] --> X["API Endpoint"]
+    U["User Trigger"] --> X["API Endpoint"]
     X --> J["Create Job Record"]
     J --> Q["Queue Publish"]
     Q --> W["Worker Pull"]
-    W --> S["Processing Stage Pipeline"]
+    W --> S["Stage Pipeline"]
     S --> C["Context + Analysis Updates"]
     C --> R["Recalibration Signals"]
     R --> P["Persistence"]
@@ -80,8 +80,16 @@ flowchart LR
 | generation contract | schema validation gate |
 | retrieval scope | scoped query filters |
 | model fallback | provider routing logic |
-| export safety | provenance/citation checks |
+| provenance integrity | citation map checks against source scope |
 | operational visibility | logs + metrics + trace events |
+
+## Signature Moves (Public-Safe)
+
+1. **Schema + provenance dual gate:** persistence only proceeds when both output schema and citation mapping pass.
+2. **Bounded repair before fallback:** one repair pass prevents retry storms while preserving reliability.
+3. **Scope-locked retrieval and citations:** citation keys are validated against the retrieved source set to prevent cross-scope leakage.
+
+Detailed contract examples: [`docs/REQUEST_CONTRACTS_AND_SCHEMAS.md`](./REQUEST_CONTRACTS_AND_SCHEMAS.md)
 
 ## Current Build Snapshot
 
@@ -96,6 +104,8 @@ flowchart LR
 | prisma migrations | 22 |
 | frontend components | 87 |
 
+Snapshot source: [`docs/snapshots/architecture_snapshot_2026-02-18.md`](./snapshots/architecture_snapshot_2026-02-18.md)
+
 ## Disclosure Boundaries
 
 - omit private corpus details
@@ -107,5 +117,5 @@ flowchart LR
 
 [![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./INDEX.md)
 [![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
-[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./PROVING-GROUNDS.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./REQUEST_CONTRACTS_AND_SCHEMAS.md)
 [![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)

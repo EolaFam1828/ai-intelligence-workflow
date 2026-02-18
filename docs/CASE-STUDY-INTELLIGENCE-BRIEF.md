@@ -6,7 +6,7 @@ Verified against private codebase commit `cf855f6` on `2026-02-18`.
 
 [![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./SKILLS-EVIDENCE-MATRIX.md)
 [![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
-[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./CASE-STUDY-TEMPLATE.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./CASE-STUDY-RETRIEVAL-QUALITY.md)
 [![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
 
 ## 1. Snapshot
@@ -55,6 +55,7 @@ Verified against private codebase commit `cf855f6` on `2026-02-18`.
 ## 7. Outcomes
 
 For each claim:
+
 - metric: schema-valid response rate
 - before: 81.8%
 - after: 97.2%
@@ -109,5 +110,5 @@ For each claim:
 
 [![Prev](https://img.shields.io/badge/Prev-4B5563?style=for-the-badge)](./SKILLS-EVIDENCE-MATRIX.md)
 [![Index](https://img.shields.io/badge/Index-111827?style=for-the-badge)](./INDEX.md)
-[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./CASE-STUDY-TEMPLATE.md)
+[![Next](https://img.shields.io/badge/Next-2563EB?style=for-the-badge)](./CASE-STUDY-RETRIEVAL-QUALITY.md)
 [![Home](https://img.shields.io/badge/Home-0F172A?style=for-the-badge)](../README.md)
