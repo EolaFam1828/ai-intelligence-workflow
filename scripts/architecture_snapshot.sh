@@ -2,7 +2,12 @@
 
 set -euo pipefail
 
-SOURCE_REPO="${1:-../intelligent-litigation-services}"
+SOURCE_REPO="${1:-}"
+
+if [[ -z "${SOURCE_REPO}" ]]; then
+  echo "Usage: ./scripts/architecture_snapshot.sh <private-repo-path>" >&2
+  exit 1
+fi
 
 if [[ ! -d "${SOURCE_REPO}" ]]; then
   echo "Source repository not found: ${SOURCE_REPO}" >&2

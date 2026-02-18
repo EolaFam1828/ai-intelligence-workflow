@@ -11,7 +11,7 @@
 | Provenance | `docs/SYSTEMS-ARCHITECTURE.md` | source metadata path documented |
 | Privacy/IP controls | `docs/PRIVACY_IP_GUARDRAILS.md` | publication boundaries documented |
 | Delivery outcomes | case studies using `docs/CASE-STUDY-TEMPLATE.md` | claims include before/after + method |
-| Visual implementation proof | `docs/VISUAL-WALKTHROUGH.md` | sanitized desktop/mobile captures included |
+| Visual implementation proof | `docs/VISUAL-WALKTHROUGH.md`, `docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md` | sanitized landing and authenticated module captures included |
 | Architecture currency check | `docs/ARCHITECTURE-DRIFT-CHECK.md` | stale claims identified with code-level counts |
 
 ## Claim Format

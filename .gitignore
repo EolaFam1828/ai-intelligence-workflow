@@ -7,4 +7,5 @@
 # Keep only sanitized screenshots
 assets/screenshots/raw-*.png
 assets/screenshots/test-*.png
+assets/screenshots/debug-*.png
 assets/screenshots/ui-overview-dark-sanitized.png

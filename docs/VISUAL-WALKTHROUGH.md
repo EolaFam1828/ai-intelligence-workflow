@@ -2,6 +2,8 @@
 
 All images in this document are sanitized render captures from the private application UI.
 
+Authenticated module renders: [`docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md`](VISUAL-WALKTHROUGH-AUTHENTICATED.md)
+
 ## Desktop View
 
 ![Sanitized Desktop UI](../assets/screenshots/ui-overview-desktop-sanitized.png)

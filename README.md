@@ -34,11 +34,14 @@ Verification date: `2026-02-18`
 ## Visual Walkthrough
 
 - [`docs/VISUAL-WALKTHROUGH.md`](docs/VISUAL-WALKTHROUGH.md)
+- [`docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md`](docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md)
 - [`docs/SYSTEMS-ARCHITECTURE.md`](docs/SYSTEMS-ARCHITECTURE.md)
 
 ![Sanitized UI Desktop](assets/screenshots/ui-overview-desktop-sanitized.png)
 
 ![Sanitized UI Mobile](assets/screenshots/ui-overview-mobile-sanitized.png)
+
+![Sanitized Authenticated Workflow Module](assets/screenshots/ui-module-workflow-auth-sanitized.png)
 
 ## Drift Check
 
@@ -48,6 +51,7 @@ Verification date: `2026-02-18`
 
 - [`docs/SYSTEMS-ARCHITECTURE.md`](docs/SYSTEMS-ARCHITECTURE.md)
 - [`docs/VISUAL-WALKTHROUGH.md`](docs/VISUAL-WALKTHROUGH.md)
+- [`docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md`](docs/VISUAL-WALKTHROUGH-AUTHENTICATED.md)
 - [`docs/ARCHITECTURE-DRIFT-CHECK.md`](docs/ARCHITECTURE-DRIFT-CHECK.md)
 - [`docs/SKILLS-EVIDENCE-MATRIX.md`](docs/SKILLS-EVIDENCE-MATRIX.md)
 - [`docs/CASE-STUDY-TEMPLATE.md`](docs/CASE-STUDY-TEMPLATE.md)
@@ -58,7 +62,7 @@ Verification date: `2026-02-18`
 
 ## Update Workflow
 
-1. Refresh counts from private source with `scripts/architecture_snapshot.sh`.
+1. Refresh counts from private source with `scripts/architecture_snapshot.sh <private-repo-path>`.
 2. Update architecture or case-study docs.
 3. Verify every claim has a measurement source.
 4. Copy `.portfolio-sensitive-terms.example.txt` to `.portfolio-sensitive-terms.txt` and add private terms.
