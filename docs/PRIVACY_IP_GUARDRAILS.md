@@ -1,57 +1,37 @@
 # Privacy and IP Guardrails
 
-These guardrails keep this portfolio truthful, useful, and safe to publish.
+## Rules
 
-## Non-Negotiable Rules
+1. Do not publish client-identifying details.
+2. Do not publish confidential workflow details.
+3. Do not publish private repository source code.
+4. Do not publish proprietary heuristics or internal schemas.
+5. Do not publish unverified claims.
 
-1. No client-identifying details
-- no names, identifiers, or data signatures that could reveal source context
+## Allowed Content
 
-2. No confidential workflow specifics
-- no private operational procedures
-- no internal-only process details
+- architecture diagrams
+- component responsibilities
+- reliability/observability controls
+- sanitized metrics with measurement method
+- tradeoff notes without private implementation detail
 
-3. No proprietary implementation leakage
-- no copy/paste source from private repositories
-- no publication of secret heuristics or ranking formulas
+## Redaction Rules
 
-4. No unverified claims
-- every published achievement must be evidence-backed
+- replace domain terms with neutral technical terms
+- replace private resource names with generic names
+- remove identifiers, IDs, tokens, and exact data signatures
 
-## Allowed Public Content
+## Claim Requirements
 
-- architecture abstractions
-- component boundaries and responsibilities
-- reliability and observability patterns
-- sanitized before/after metrics
-- lessons learned and tradeoff analysis
+Each claim includes:
+- ownership scope
+- implementation summary
+- measurement method
+- limits
 
-## Redaction Guidelines
+## Pre-Publish Checklist
 
-Replace:
-- domain-specific nouns with neutral workflow terms
-- private table/index names with generic resource names
-- specific partner/provider details with capability classes
-
-Keep:
-- technical reasoning
-- decision tradeoffs
-- measurable outcomes (if verified)
-
-## Claim Validation Standard
-
-Every major claim should answer:
-- what changed?
-- how was it measured?
-- what was my contribution?
-- what are the limits of the claim?
-
-If any answer is missing, downgrade or remove the claim.
-
-## Publication Checklist
-
-Before each push:
 - run `scripts/sanity_check_portfolio.sh`
-- manually review diff for private or domain-specific leakage
-- ensure new statements are evidence-backed
-- confirm wording remains domain-neutral and recruiter-readable
+- inspect diff for private terms or identifiers
+- remove unverifiable statements

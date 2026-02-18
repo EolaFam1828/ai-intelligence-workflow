@@ -1,18 +1,10 @@
-# Systems Architecture (Sanitized)
+# System Architecture
 
-## Purpose
+## Scope
 
-This document explains the architecture and operating model of the AI platform in a public-safe way. It focuses on engineering decisions, not sensitive domain specifics.
+Architecture and operating pattern summary for public review.
 
-## Design Goals
-
-- reliable AI orchestration under production load
-- traceable outputs with source-aware provenance
-- predictable downstream integration via structured contracts
-- controlled cost/latency through model routing and fallback logic
-- safe collaboration between engineering and domain experts
-
-## High-Level Flow
+## Request Flow
 
 ```mermaid
 flowchart LR
@@ -29,67 +21,43 @@ flowchart LR
     H --> I
     I --> J["Provenance Composer"]
     J --> K["Response + Metadata"]
-    C --> L["Observability: Logs, Metrics, Traces"]
+    C --> L["Logs, Metrics, Traces"]
     I --> L
     J --> L
 ```
 
-## Core Components
+## Components
 
-1. Request Classifier
-- tags request intent, complexity, and risk profile
-- determines orchestration path
+| Component | Responsibility |
+| --- | --- |
+| Request Classifier | Classifies intent and selects orchestration path |
+| Orchestration Engine | Coordinates routing, retrieval, validation, and error paths |
+| Model Router | Selects primary/fallback model by constraints |
+| Retrieval Pipeline | Search, rank, and filter context |
+| Context Builder | Assembles model input context |
+| Structured Output Validator | Enforces output schema |
+| Provenance Composer | Adds source and processing metadata |
+| Observability Layer | Records traces, metrics, and errors |
 
-2. Orchestration Engine
-- coordinates routing, retrieval, validation, fallback, and error handling
-- enforces workflow contracts between components
+## Control Points
 
-3. Model Router
-- chooses model/provider based on task shape, cost budget, latency objectives, and quality thresholds
-- supports provider fallback for resilience
+- model/provider routing
+- retrieval ranking and context filters
+- schema validation gate
+- fallback and retry path
+- provenance attachment
+- stage-level telemetry
 
-4. Retrieval Pipeline
-- performs indexing, search, ranking, and context filtering
-- hands clean, scoped context to generation stage
+## Reliability Controls
 
-5. Structured Output Validator
-- verifies schema conformance before response leaves system
-- rejects malformed output and triggers retries or fallback paths
+- timeout budget per stage
+- bounded retry policy
+- primary-to-fallback provider path
+- dead-letter path for unrecoverable failures
 
-6. Provenance Composer
-- attaches evidence lineage (source IDs, retrieval metadata, confidence hints)
-- enables explainability for users and reviewers
+## Disclosure Boundaries
 
-7. Observability Layer
-- captures traces, error classes, throughput, latency, and fallback rates
-- supports performance tuning and incident response
-
-## Reliability Patterns
-
-- timeout budgets per stage
-- circuit-breaker style fallback between model providers
-- retry policies with bounded attempts
-- schema validation gates before final response
-- dead-letter path for non-recoverable failures
-
-## Security and Privacy Patterns (Public-Safe Summary)
-
-- strict separation of prompt orchestration and sensitive data sources
-- scoped access to retrieval indexes
-- no raw private dataset exposure in public documentation
-- redaction-first logging approach for potentially sensitive payloads
-
-## What Is Intentionally Omitted
-
-- domain-specific rules and terminology
-- private retrieval corpus details
-- proprietary ranking/routing heuristics
-- customer or record-level data patterns
-- code-level implementation details from the private repo
-
-## What Hiring Teams Can Evaluate Here
-
-- architecture quality and system decomposition
-- reasoning about AI reliability in production
-- tradeoff management across cost/quality/latency/safety
-- ability to design for traceability and operational maturity
+- omit private corpus details
+- omit proprietary ranking/routing heuristics
+- omit private schemas and identifiers
+- omit private repository source code

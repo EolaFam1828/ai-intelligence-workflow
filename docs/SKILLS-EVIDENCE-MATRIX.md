@@ -1,70 +1,30 @@
-# Skills to Evidence Matrix
+# Skills Evidence Matrix
 
-This matrix maps portfolio artifacts to evaluation criteria used by recruiters, hiring managers, and technical leaders.
+## Capability Mapping
 
-## Capability Matrix
+| Capability | Artifact | Evidence Check |
+| --- | --- | --- |
+| AI orchestration | `docs/SYSTEMS-ARCHITECTURE.md` | routing + stage flow documented |
+| Retrieval design | `docs/SYSTEMS-ARCHITECTURE.md` | retrieval + context stages documented |
+| Structured outputs | `docs/SYSTEMS-ARCHITECTURE.md` | schema validation gate documented |
+| Reliability controls | `docs/SYSTEMS-ARCHITECTURE.md` | timeout/retry/fallback controls documented |
+| Provenance | `docs/SYSTEMS-ARCHITECTURE.md` | source metadata path documented |
+| Privacy/IP controls | `docs/PRIVACY_IP_GUARDRAILS.md` | publication boundaries documented |
+| Delivery outcomes | case studies using `docs/CASE-STUDY-TEMPLATE.md` | claims include before/after + method |
 
-| Capability Area | Implemented Pattern | Evidence Artifact In This Repo | Why It Matters |
-| --- | --- | --- | --- |
-| AI System Architecture | Multi-stage orchestration pipeline with routing, retrieval, validation, and provenance | `docs/SYSTEMS-ARCHITECTURE.md` | Shows system-level engineering depth |
-| LLM Operations | Dynamic model/provider routing with fallback strategy | `docs/SYSTEMS-ARCHITECTURE.md` | Demonstrates reliability and cost awareness |
-| Retrieval Design | Retrieval + context assembly workflow | `docs/SYSTEMS-ARCHITECTURE.md` | Proves grounding and relevance handling |
-| Output Reliability | Structured output contracts and schema validation gates | `docs/SYSTEMS-ARCHITECTURE.md` | Enables deterministic downstream integrations |
-| Explainability | Provenance metadata strategy | `docs/SYSTEMS-ARCHITECTURE.md` | Builds trust and auditability |
-| Product Execution | Ability to convert ambiguous workflows into production architecture | Case studies authored with `docs/CASE-STUDY-TEMPLATE.md` | Shows execution, not just prototyping |
-| Security/Privacy Judgment | Explicit redaction and publication guardrails | `docs/PRIVACY_IP_GUARDRAILS.md` | Signals mature engineering and risk control |
+## Role Review Map
 
-## Role-Aligned Interpretation
+| Role | Review Questions | Primary Files |
+| --- | --- | --- |
+| AI Engineer | How are routing, retrieval, validation, and fallback handled? | `docs/SYSTEMS-ARCHITECTURE.md` |
+| Systems Architect | Are boundaries and failure paths explicit? | `docs/SYSTEMS-ARCHITECTURE.md` |
+| Product/AI Specialist | Are outcomes measurable and scoped? | case studies using `docs/CASE-STUDY-TEMPLATE.md` |
+| Domain Expert | Is output traceable and publication-safe? | `docs/SYSTEMS-ARCHITECTURE.md`, `docs/PRIVACY_IP_GUARDRAILS.md` |
 
-### AI Engineer
+## Claim Format
 
-Look for:
-- orchestration quality
-- model routing decisions
-- structured output reliability
-- observability patterns
-
-Primary proof:
-- `docs/SYSTEMS-ARCHITECTURE.md`
-- case studies using `docs/CASE-STUDY-TEMPLATE.md`
-
-### Systems Architect
-
-Look for:
-- decomposition quality
-- failure handling strategy
-- reliability and scaling mindset
-- component contract clarity
-
-Primary proof:
-- `docs/SYSTEMS-ARCHITECTURE.md`
-- `docs/PORTFOLIO_EXTRACTION_PLAYBOOK.md`
-
-### Product/Design-Focused AI Builder
-
-Look for:
-- conversion of domain problems into clear workflow stages
-- decision framing and tradeoff communication
-- measurable outcomes tied to user value
-
-Primary proof:
-- case studies using `docs/CASE-STUDY-TEMPLATE.md`
-
-### Domain/Knowledge Work Integrator
-
-Look for:
-- provenance and traceability
-- structured outputs compatible with review-heavy workflows
-- safe handling of sensitive context
-
-Primary proof:
-- `docs/SYSTEMS-ARCHITECTURE.md`
-- `docs/PRIVACY_IP_GUARDRAILS.md`
-
-## Evidence Quality Standard
-
-Each published claim should include:
-- scope: what you directly owned
-- method: how it was implemented
-- verification: metric, before/after, or observed operational impact
-- limits: where tradeoffs remained
+Each claim should include:
+- ownership scope
+- implementation method
+- verification method
+- known limits

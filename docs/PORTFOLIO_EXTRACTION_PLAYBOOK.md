@@ -1,98 +1,43 @@
 # Portfolio Extraction Playbook
 
-This playbook describes how to convert work from a private codebase into a high-quality public portfolio without leaking sensitive context or proprietary implementation.
+## Goal
 
-## Objective
+Convert private project work into public documentation without disclosing private code, identifiers, or proprietary logic.
 
-Produce publishable artifacts that show:
-- system architecture depth
-- practical AI engineering decisions
+## Steps
+
+1. Inventory artifacts in the private repo.
+- architecture notes
+- operating patterns
+- incidents/fixes
 - measurable outcomes
-- professional risk judgment
 
-Without revealing:
-- private source code
-- client/domain-sensitive details
-- proprietary platform IP
-
-## Extraction Workflow
-
-## 1) Build an Internal Inventory (Private Workspace)
-
-Create a private list of potential artifacts:
-- architecture diagrams
-- module responsibilities
-- deployment/ops patterns
-- incidents and fixes
-- measurable improvements
-
-Tag each item:
+2. Classify each artifact.
 - `public-safe`
 - `public-safe-with-redaction`
 - `private-only`
 
-## 2) Convert to Domain-Neutral Language
+3. Rewrite to neutral terms.
+- replace domain terms with technical terms
+- remove private identifiers
 
-Translate domain terms into reusable engineering terms.
-
-Examples:
-- domain-specific workflow -> document-centric workflow
-- specialist review path -> expert review path
-- internal object metadata -> record metadata
-
-## 3) Extract Patterns, Not Source
-
-Publish:
+4. Publish patterns only.
 - architecture diagrams
-- decision rationales
-- pseudocode-level workflows
-- reliability/security strategies
-- metric summaries
+- workflow descriptions
+- reliability controls
+- outcome summaries
 
-Do not publish:
+5. Do not publish:
 - source files from private repo
 - proprietary heuristics
-- schema/details tied to confidential data models
+- private schemas
 
-## 4) Draft Case Studies
+6. Draft case studies with `docs/CASE-STUDY-TEMPLATE.md`.
 
-For each major achievement:
-- use `docs/CASE-STUDY-TEMPLATE.md`
-- include only verified outcomes
-- explicitly separate personal ownership from team contributions
+7. Run checks before each publish.
+- `scripts/sanity_check_portfolio.sh`
+- manual diff review for disclosure
 
-Recommended count:
-- 2 to 4 strong case studies
-
-## 5) Attach Role Relevance
-
-For each artifact, map value to:
-- AI Engineer
-- Systems Architect
-- Product/AI Specialist
-- Domain-integrated knowledge workflows
-
-Use `docs/SKILLS-EVIDENCE-MATRIX.md` for consistency.
-
-## 6) Run Safety Checks Before Publish
-
-- run `scripts/sanity_check_portfolio.sh`
-- manually review for accidental private language
-- ask one trusted reviewer to perform a leakage pass
-
-## 7) Publish and Iterate
-
-Each update should improve one of:
-- clarity
-- evidence quality
-- relevance to target roles
-
-## Suggested Repository Rhythm
-
-Weekly:
-- add one architecture or decision note
-- improve one case study section with better evidence
-
-Monthly:
-- refresh skills/evidence mapping for current target roles
-- prune weak or redundant claims
+8. Keep updates incremental.
+- add or revise one artifact at a time
+- remove weak or unverifiable claims
