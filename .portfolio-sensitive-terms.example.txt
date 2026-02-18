@@ -1,0 +1,8 @@
+# One regex fragment per line.
+# Copy this file to .portfolio-sensitive-terms.txt and customize for your context.
+# Lines starting with # are ignored.
+
+acme-corp
+project-phoenix
+internal_workflow_[0-9]+
+private_dataset_name
