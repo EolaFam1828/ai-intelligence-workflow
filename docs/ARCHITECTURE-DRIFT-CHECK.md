@@ -1,5 +1,7 @@
 # Architecture Drift Check
 
+Verified against private codebase commit `cf855f6` on `2026-02-18`.
+
 Source repository audited: private source repository  
 Audit date: `2026-02-18`  
 Commit: `cf855f6`
@@ -10,7 +12,7 @@ Commit: `cf855f6`
 | --- | --- | --- | --- |
 | `TECH_SPEC.md:91` and `TECH_SPEC.md:369` | `16 route modules` and `117+ endpoints` | `25` route files under `server/src/routes`, `151` route handlers (`router.get/post/put/patch/delete`) | stale |
 | `TECH_SPEC.md:106` and `TECH_SPEC.md:200` | `44 models` and `18 migrations` | `49` Prisma models, `22` migration directories | stale |
-| `README.md:228` | `147 API endpoints` | `151` route handlers by current code count | stale |
+| `README.md:228` | `147 API endpoints` | public docs now aligned to `151` route handlers in `README.md:16` and `docs/SYSTEMS-ARCHITECTURE.md:86` | resolved (public mirror updated) |
 | `TECH_SPEC.md:1071` | `No mobile optimization` | responsive mobile shell paths in `App.tsx:188`, `App.tsx:292`, `App.tsx:319`; validated by sanitized mobile render capture | stale |
 
 ## Command Log

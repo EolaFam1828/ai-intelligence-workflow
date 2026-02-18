@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "${REPO_ROOT}"
+
+echo "Running portfolio sanity check..."
+./scripts/sanity_check_portfolio.sh "${REPO_ROOT}"

@@ -1,5 +1,7 @@
 # Portfolio Extraction Playbook
 
+Verified against private codebase commit `cf855f6` on `2026-02-18`.
+
 ## Goal
 
 Convert private project work into public documentation without disclosing private code, identifiers, or proprietary logic.
@@ -36,6 +38,8 @@ Convert private project work into public documentation without disclosing privat
 
 7. Run checks before each publish.
 - `scripts/sanity_check_portfolio.sh`
+- `.githooks/pre-commit` (after `scripts/install_git_hooks.sh`)
+- `.github/workflows/sanity-check.yml` on PR/push
 - manual diff review for disclosure
 
 8. Keep updates incremental.

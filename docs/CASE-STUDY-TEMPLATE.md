@@ -1,5 +1,9 @@
 # Case Study Template
 
+Verified against private codebase commit `cf855f6` on `2026-02-18`.
+
+Reference example: `docs/CASE-STUDY-INTELLIGENCE-BRIEF.md`
+
 ## 1. Snapshot
 
 - title:

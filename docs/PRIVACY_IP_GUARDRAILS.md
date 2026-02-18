@@ -1,5 +1,7 @@
 # Privacy and IP Guardrails
 
+Verified against private codebase commit `cf855f6` on `2026-02-18`.
+
 ## Rules
 
 1. Do not publish client-identifying details.
@@ -33,5 +35,7 @@ Each claim includes:
 ## Pre-Publish Checklist
 
 - run `scripts/sanity_check_portfolio.sh`
+- install pre-commit automation with `scripts/install_git_hooks.sh`
+- confirm CI workflow `.github/workflows/sanity-check.yml` passes
 - inspect diff for private terms or identifiers
 - remove unverifiable statements

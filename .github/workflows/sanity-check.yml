@@ -1,0 +1,21 @@
+name: Portfolio Sanity Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  sanity-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure scripts are executable
+        run: chmod +x scripts/sanity_check_portfolio.sh
+
+      - name: Run portfolio sanity checks
+        run: ./scripts/sanity_check_portfolio.sh .
