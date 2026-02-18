@@ -1,10 +1,10 @@
 # Skills to Evidence Matrix
 
-Use this matrix to present capabilities in a way that is easy for recruiters, hiring managers, and technical leaders to evaluate quickly.
+This matrix maps portfolio artifacts to evaluation criteria used by recruiters, hiring managers, and technical leaders.
 
 ## Capability Matrix
 
-| Capability Area | What I Built | Evidence Artifact In This Repo | Why It Matters |
+| Capability Area | Implemented Pattern | Evidence Artifact In This Repo | Why It Matters |
 | --- | --- | --- | --- |
 | AI System Architecture | Multi-stage orchestration pipeline with routing, retrieval, validation, and provenance | `docs/SYSTEMS-ARCHITECTURE.md` | Shows system-level engineering depth |
 | LLM Operations | Dynamic model/provider routing with fallback strategy | `docs/SYSTEMS-ARCHITECTURE.md` | Demonstrates reliability and cost awareness |

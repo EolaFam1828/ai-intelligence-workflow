@@ -8,20 +8,13 @@ Public-facing portfolio documentation of a production-grade TypeScript AI platfo
 
 This repository is intentionally sanitized. It is designed to show technical depth and execution quality without exposing domain-sensitive context, private source code, client information, or proprietary platform IP.
 
-## What This Repository Proves
+## Repository Approach
 
-This portfolio demonstrates that I can design, build, and operate complex AI systems end to end:
-- architect systems, not just prompts
-- ship production workflows with reliability constraints
-- make tradeoffs across latency, quality, cost, and safety
-- communicate clearly with engineering, product, and domain experts
-
-## Audience-Fit Map
-
-- Recruiter: quick signal on role fit and scope
-- Hiring Manager: evidence of ownership, decision quality, and delivery outcomes
-- VP Engineering: architecture maturity, scalability patterns, and risk controls
-- Domain professionals (for example compliance and operations): trust, traceability, and structured outputs
+This repository focuses on:
+- architecture decisions and system decomposition
+- reliability, validation, and fallback patterns
+- traceability and structured output contracts
+- measurable outcomes with explicit scope and limits
 
 ## Portfolio Contents
 
@@ -32,7 +25,7 @@ This portfolio demonstrates that I can design, build, and operate complex AI sys
 - [`docs/PRIVACY_IP_GUARDRAILS.md`](docs/PRIVACY_IP_GUARDRAILS.md): rules for privacy, confidentiality, and IP protection
 - [`scripts/sanity_check_portfolio.sh`](scripts/sanity_check_portfolio.sh): local scan for sensitive wording and secret patterns
 
-## Capability Highlights
+## Core Platform Elements
 
 Core platform capabilities documented here:
 - intelligent model routing based on task profile and quality/cost constraints
@@ -42,7 +35,7 @@ Core platform capabilities documented here:
 - fallback and retry patterns for resilient execution
 - instrumentation hooks for runtime observability
 
-## Truth Standard
+## Evidence Standard
 
 Everything published in this repo should be:
 - accurate
